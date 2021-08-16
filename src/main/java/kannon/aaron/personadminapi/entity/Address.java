@@ -35,5 +35,5 @@ public class Address {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private ResidenceType type;
+    private ResidenceType residenceType;
 }
