@@ -1,5 +1,6 @@
 package kannon.aaron.personadminapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import kannon.aaron.personadminapi.enums.ResidenceType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Address {
 
     @Id
