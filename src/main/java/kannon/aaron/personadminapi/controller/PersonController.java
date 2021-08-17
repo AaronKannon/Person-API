@@ -3,6 +3,7 @@ package kannon.aaron.personadminapi.controller;
 
 import kannon.aaron.personadminapi.dto.request.PersonDTO;
 import kannon.aaron.personadminapi.dto.response.MessageResponseDTO;
+import kannon.aaron.personadminapi.exception.PersonNotFoundException;
 import kannon.aaron.personadminapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,13 @@ public class PersonController {
         return personService.createPerson(personDTO);
     }
 
+    @GetMapping
     public List<PersonDTO> listAll() {
         return personService.listAll();
+    }
+
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findById(id);
     }
 }
