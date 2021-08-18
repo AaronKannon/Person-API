@@ -38,10 +38,10 @@ public class PersonDTO {
 
     @Valid
     @NotNull
-    private Address address;
+    private AddressDTO address;
 
     @Valid
     @NotEmpty
-    private List<Phone> phones;
+    private List<PhoneDTO> phones;
 
 }
