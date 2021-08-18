@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>kannon.aaron</groupId>
 	<artifactId>personadminapi</artifactId>
-	<version>API v1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>personadminapi</name>
 	<description>A Person Administration API </description>
 	<properties>
