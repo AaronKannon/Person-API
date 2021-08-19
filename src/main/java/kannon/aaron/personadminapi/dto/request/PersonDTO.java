@@ -1,6 +1,7 @@
 package kannon.aaron.personadminapi.dto.request;
 
 import kannon.aaron.personadminapi.entity.Address;
+import kannon.aaron.personadminapi.entity.Course;
 import kannon.aaron.personadminapi.entity.Phone;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,4 +45,7 @@ public class PersonDTO {
     @NotEmpty
     private List<PhoneDTO> phones;
 
+    @Valid
+    @NotNull
+    private CourseDTO course;
 }

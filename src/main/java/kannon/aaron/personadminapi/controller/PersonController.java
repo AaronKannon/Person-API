@@ -18,9 +18,6 @@ import java.util.List;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-    // Criar a classe de curso
-    // Criar a classe de Materias
-
     private PersonService personService;
 
     @PostMapping
