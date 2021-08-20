@@ -45,9 +45,10 @@ public class PersonService {
         return createMessageResponse(updatedPerson.getId(), "updating person with ID ");
     }
 
-    public void deleteById(Long id) throws PersonNotFoundException {
+    public MessageResponseDTO deleteById(Long id) throws PersonNotFoundException {
         verifyIfExists(id);
         personRepository.deleteById(id);
+        return createMessageResponse(id, "deleting person with ID ");
     }
 
     private Person verifyIfExists(Long id) throws PersonNotFoundException {
